@@ -89,6 +89,6 @@ foreach ($PSTool in $PSTools) {
 }
 
 foreach ($WinExe in $WinExecutables) {
-  $ExeName = Split-Path $WinExecutables -Leaf
-  Invoke-WebRequest -Uri $WinExecutables -UseBasicParsing -OutFile "C:\Workspace\$ExeName"
+  $ExeName = Split-Path $WinExe -Leaf
+  Invoke-WebRequest -Uri $WinExe -UseBasicParsing -OutFile "C:\Workspace\$ExeName"
 }
